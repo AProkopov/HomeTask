@@ -5,15 +5,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import com.prokopov.core.ui.BaseViewBindingFragment
 import com.prokopov.hometask.databinding.FragmentSplashBinding
-import javax.inject.Inject
+import com.prokopov.hometask.viewmodel.SplashViewModel
 
 class SplashFragment : BaseViewBindingFragment<FragmentSplashBinding>() {
 
-    companion object {
-        const val TAG = "SplashFragment"
-    }
+    private val viewModel by viewModels<SplashViewModel>()
 
     override fun createViewBinding(
         inflater: LayoutInflater,
@@ -30,5 +29,9 @@ class SplashFragment : BaseViewBindingFragment<FragmentSplashBinding>() {
         savedInstanceState: Bundle?
     ): View? {
         return super.onCreateView(inflater, container, savedInstanceState)
+    }
+
+    companion object {
+        const val TAG = "SplashFragment"
     }
 }
