@@ -8,7 +8,9 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class SplashViewModel @Inject constructor(): ViewModel() {
+class SplashViewModel @Inject constructor(
+    private val someInjectableEntity: SomeInjectableEntity
+): ViewModel() {
 
     private val initialDataLiveData: MutableLiveData<Boolean> = MutableLiveData<Boolean>()
     private val loadingStateLiveData: MutableLiveData<Boolean> = MutableLiveData<Boolean>()
