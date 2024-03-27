@@ -1,6 +1,5 @@
 package com.prokopov.hometask.ui
 
-import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,11 +7,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import com.prokopov.core.ui.BaseViewBindingFragment
 import com.prokopov.hometask.databinding.FragmentSplashBinding
-import com.prokopov.hometask.viewmodel.SplashViewModel
+import com.prokopov.hometask.viewmodel.PlanetsViewModel
 
-class SplashFragment : BaseViewBindingFragment<FragmentSplashBinding>() {
+class PlanetsFragment : BaseViewBindingFragment<FragmentSplashBinding>() {
 
-    private val viewModel by viewModels<SplashViewModel>()
+    private val viewModel by viewModels<PlanetsViewModel>()
 
     override fun createViewBinding(
         inflater: LayoutInflater,

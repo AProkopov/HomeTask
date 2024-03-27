@@ -9,7 +9,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class SplashViewModel @Inject constructor(
+class PlanetsViewModel @Inject constructor(
     private val networkResources: NetworkResources
 ): ViewModel() {
 
