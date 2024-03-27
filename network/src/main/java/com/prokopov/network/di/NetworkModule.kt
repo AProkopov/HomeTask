@@ -1,10 +1,17 @@
 package com.prokopov.network.di
 
+import com.prokopov.network.NetworkResources
 import dagger.Module
+import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ViewModelComponent
+import dagger.hilt.components.SingletonComponent
+import javax.inject.Singleton
 
 @Module
-@InstallIn(ViewModelComponent::class)
+@InstallIn(SingletonComponent::class)
 class NetworkModule {
+
+    @Provides
+    @Singleton
+    internal fun provideNetworkResources(): NetworkResources = NetworkResources()
 }

@@ -4,12 +4,13 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.prokopov.core.data.Resource
+import com.prokopov.network.NetworkResources
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
 class SplashViewModel @Inject constructor(
-    private val someInjectableEntity: SomeInjectableEntity
+    private val networkResources: NetworkResources
 ): ViewModel() {
 
     private val initialDataLiveData: MutableLiveData<Boolean> = MutableLiveData<Boolean>()
